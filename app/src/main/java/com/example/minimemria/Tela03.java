@@ -143,25 +143,7 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener{
 
     public void compare(int imagem1, int imagem2){
         flag = false;
-        Handler h1 = new Handler();
-        h1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                img1.setEnabled(true);
-                img2.setEnabled(true);
-                img3.setEnabled(true);
-                img4.setEnabled(true);
-                img5.setEnabled(true);
-                img6.setEnabled(true);
-                img7.setEnabled(true);
-                img8.setEnabled(true);
-                if(flag)
-                {
-                    imgPrimeiroToque.setEnabled(false);
-                    imgSegundoToque.setEnabled(false);
-                }
-            }
-        }, 3000);
+
 
         if(imagem1 == imagem2){
            flag=true;
@@ -191,6 +173,65 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener{
             },1500);
         }
         ContaToque = 0;
+        Handler h1 = new Handler();
+        h1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if((imgPrimeiroToque != img1)){
+                    img1.setEnabled(true);
+                }
+                if(imgPrimeiroToque != img2){
+                    img2.setEnabled(true);
+                }
+                if(imgPrimeiroToque != img3){
+                    img3.setEnabled(true);
+                }
+                if(imgPrimeiroToque != img4){
+                    img4.setEnabled(true);
+                }
+                if(imgPrimeiroToque != img5){
+                    img5.setEnabled(true);
+                }
+                if(imgPrimeiroToque != img6){
+                    img7.setEnabled(true);
+                }
+                if(imgPrimeiroToque != img8){
+                    img8.setEnabled(true);
+                }
+
+                if(imgSegundoToque != img1){
+                    img1.setEnabled(true);
+                }
+                if(imgSegundoToque != img2){
+                    img2.setEnabled(true);
+                }
+                if(imgSegundoToque != img3){
+                    img3.setEnabled(true);
+                }
+                if(imgSegundoToque != img4){
+                    img4.setEnabled(true);
+                }
+                if(imgSegundoToque != img5){
+                    img5.setEnabled(true);
+                }
+                if(imgSegundoToque != img6){
+                    img6.setEnabled(true);
+                }
+                if(imgSegundoToque != img7){
+                    img7.setEnabled(true);
+                }
+                if(imgSegundoToque != img8){
+                    img8.setEnabled(true);
+                }
+
+
+                if(flag)
+                {
+                    imgPrimeiroToque.setEnabled(false);
+                    imgSegundoToque.setEnabled(false);
+                }
+            }
+        }, 3000);
     }
 
     @Override

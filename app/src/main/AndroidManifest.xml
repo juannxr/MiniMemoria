@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniMemória">
         <activity
+            android:name=".Tela04"
+            android:exported="false" />
+        <activity
             android:name=".Tela02"
             android:exported="false" />
         <activity
