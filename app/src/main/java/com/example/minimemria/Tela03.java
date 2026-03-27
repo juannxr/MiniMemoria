@@ -62,7 +62,7 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener{
             if(caixa != null){
                 //Significa que a caixa veio corrompida
                 nome = caixa.getString("nome");
-
+                texto.setText(nome);
             }
         }
 
@@ -367,6 +367,10 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener{
         }
         if(v == btn4){
             Intent i = new Intent(this, Tela04.class);
+            Bundle caixa = new Bundle();
+            caixa.putString("nome",nome);
+            caixa.putInt("vezes",vezes);
+            i.putExtras(caixa);
             startActivity(i);
         }
         }
